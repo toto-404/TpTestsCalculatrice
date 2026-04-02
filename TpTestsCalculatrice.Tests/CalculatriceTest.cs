@@ -83,4 +83,29 @@ public class CalculatriceTests
         int resultat = calc.Addition(100, 200);
         Assert.AreEqual(300, resultat);
     }
+
+    //partie bonus
+    [TestMethod]
+    public void Max_Retourne7_Si3Et7()
+    {
+        Calculatrice calc = new Calculatrice();
+        int resultat = calc.Max(7, 3);
+        Assert.AreEqual(7, resultat);
+    }
+
+    [TestMethod]
+    public void Max_Retourne10_Si10Et2()
+    {
+        Calculatrice calc = new Calculatrice();
+        int resultat = calc.Max(10, 2);
+        Assert.AreEqual(10, resultat);
+    }
+
+    [TestMethod]
+    public void Max_Retourne5_Si5Et5()
+    {
+        Calculatrice calc = new Calculatrice();
+        int resultat = calc.Max(5, 5);
+        Assert.AreEqual(5, resultat);
+    }
 }
