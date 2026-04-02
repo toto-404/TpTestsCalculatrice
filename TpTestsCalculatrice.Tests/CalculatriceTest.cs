@@ -17,4 +17,12 @@ public class CalculatriceTests
         int resultat = calc.Soustraction(5, 3);
         Assert.AreEqual(2, resultat);
     }
+
+    [TestMethod]
+    public void Multiplication_Retourne12_Si4Fois3()
+    {
+        Calculatrice calc = new Calculatrice();
+        int resultat = calc.Multiplication(4, 3);
+        Assert.AreEqual(12, resultat);
+    }
 }
