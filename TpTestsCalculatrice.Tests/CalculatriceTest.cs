@@ -59,4 +59,28 @@ public class CalculatriceTests
         bool resultat = calc.EstPair(5);
         Assert.IsFalse(resultat);
     }
+
+    [TestMethod]
+    public void Addition_RetourneZero_Si0Plus0()
+    {
+        Calculatrice calc = new Calculatrice();
+        int resultat = calc.Addition(0, 0);
+        Assert.AreEqual(0, resultat);
+    }
+
+    [TestMethod]
+    public void Addition_RetourneZero_SiNombreNegatif()
+    {
+        Calculatrice calc = new Calculatrice();
+        int resultat = calc.Addition(-1, 1);
+        Assert.AreEqual(0, resultat);
+    }
+
+    [TestMethod]
+    public void Addition_DeuxGrandsNombres_RetourneSomme()
+    {
+        Calculatrice calc = new Calculatrice();
+        int resultat = calc.Addition(100, 200);
+        Assert.AreEqual(300, resultat);
+    }
 }
