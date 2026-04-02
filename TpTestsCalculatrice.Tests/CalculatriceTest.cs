@@ -25,4 +25,12 @@ public class CalculatriceTests
         int resultat = calc.Multiplication(4, 3);
         Assert.AreEqual(12, resultat);
     }
+
+    [TestMethod]
+    public void Division_Retourne5_Si10Divise2()
+    {
+        Calculatrice calc = new Calculatrice();
+        double resultat = calc.Division(10, 2);
+        Assert.AreEqual(5, resultat);
+    }
 }
