@@ -33,4 +33,30 @@ public class CalculatriceTests
         double resultat = calc.Division(10, 2);
         Assert.AreEqual(5, resultat);
     }
+
+    [TestMethod]
+    public void Division_LanceException_SiDivisionParZero()
+    {
+        Calculatrice calc = new Calculatrice();
+        Assert.Throws<Exception>(() =>
+        {
+            calc.Division(10, 0);
+        });
+    }
+
+    [TestMethod]
+    public void EstPair_RetourneTrue_SiNombrePair()
+    {
+        Calculatrice calc = new Calculatrice();
+        bool resultat = calc.EstPair(4);
+        Assert.IsTrue(resultat);
+    }
+    
+    [TestMethod]
+    public void EstPair_RetourneFalse_SiNombreImpair()
+    {
+        Calculatrice calc = new Calculatrice();
+        bool resultat = calc.EstPair(5);
+        Assert.IsFalse(resultat);
+    }
 }
